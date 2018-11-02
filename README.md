@@ -10,6 +10,17 @@ Terraform v0.11.10
 + provider.aws v1.42.0
 ```
 
+### Infrastructure details
+
+* Create Virtual Private Cloud(VPC)
+* Create a public and private subnets
+* Create an Internet Gateway
+* Create a Route Table and add a route to the Internet
+* Create a security group for the web server to only allow HTTP inbound traffic from Internet
+* Create a security group for the MySQL RDS instance server to only allow MySQL inbound traffic from the web server subnet
+* Deploy web server and a MySQL RDS instance
+* Configure application to connect to the MySQL RDS instance
+
 ## How to use
 
 ### Pre-requirement: Set AWS environment variables
