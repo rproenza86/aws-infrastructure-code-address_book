@@ -1,9 +1,11 @@
 resource "aws_instance" "phpapp" {
-  ami           = "ami-0ff8a91507f77f867"
+  ami = "ami-0ff8a91507f77f867"
+
   instance_type = "t2.micro"
 
-  #   associate_public_ip_address = "true"
-  subnet_id              = "${aws_subnet.main.id}"
+  subnet_id = "${aws_subnet.main.id}"
+
+  # Our Security group to allow inbound HTTP and SSH access
   vpc_security_group_ids = ["${aws_security_group.allow_web_traffic.id}"]
 
   tags {
