@@ -25,11 +25,11 @@ Terraform v0.11.10
 
 ### Pre-requirement: Set AWS environment variables
 ```
-$ export AWS_ACCESS_KEY_ID=<your_key>
+$ export TF_VAR_access_key=<your_key>
 
-$ export AWS_SECRET_ACCESS_KEY=<your-secret>
+$ export TF_VAR_secret_key=<your-secret>
 
-$ export AWS_DEFAULT_REGION=<your_region>
+$ export TF_VAR_region=<your_region>
 ```
 
 ### Initialize a working directory
