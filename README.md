@@ -53,13 +53,24 @@ $ export TF_VAR_region=<your_region>
 
 ## How to test?
 
+When applied the configuration `terraform` will show us the next output:
+
+```
+Outputs:
+
+db_endpoint = terraform-20181102155541101800000001.cfi372mmcqsi.us-east-1.rds.amazonaws.com:3306
+web_server_public_ip = 18.209.111.9
+```
+
+Use the `db_endpoint` and `web_server_public_ip` for the next steps.
+
 ### Open the Address Book Web App page
 
-Find on EC2 the "IPv4 Public IP"address of the "Web Server" instance and open it in a web browser.
+Find on EC2 the "IPv4 Public IP" address(`web_server_public_ip`) of the "Web Server" instance and open it in a web browser.
 
 ### Login in the web app and try some CRUD operations
 
-Find the DB endpoint on the "Connect" section of the RDS mysql created instance.
+Find the DB endpoint( `db_endpoint`) on the "Connect" section of the RDS mysql created instance.
 
 Using the DB endpoint and credentials(can be found on the 9-rdsDbResources.tf file) login in the app.
 
